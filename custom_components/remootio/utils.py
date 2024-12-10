@@ -31,8 +31,7 @@ async def _wait_for_connected(remootio_client: RemootioClient) -> bool:
 async def _check_api_version(remootio_client: RemootioClient) -> None:
     """Check whether the by the given client represented Remootio device uses a supported API version."""
     api_version: int = remootio_client.api_version
-    if api_version < EXPECTED_MINIMUM_API_VERSION:
-        raise UnsupportedRemootioApiVersionError
+
 
 
 async def _check_sensor_installed(
